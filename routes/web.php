@@ -16,7 +16,7 @@ use App\Http\Controllers\RegisterController;
 */
 
 
-Route::get('/', function () {
+Route::get('/register', function () {
     return view('register.index');
 });
 
@@ -33,3 +33,7 @@ Route::get('/thanks', function () {
 // Route::get('/email', [EmailController::class, 'kirim']);
 // Route::get('/thanks', [EmailController::class, 'notif']);
 // Route::get('/thanks', [EmailController::class, 'notif']);
+
+Route::get('/home', function () {
+    return view('home');
+});
