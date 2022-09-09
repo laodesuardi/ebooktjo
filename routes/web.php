@@ -16,7 +16,7 @@ use App\Http\Controllers\RegisterController;
 */
 
 
-Route::get('/register', function () {
+Route::get('/', function () {
     return view('register.index');
 });
 

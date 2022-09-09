@@ -29,8 +29,12 @@ class RegisterController extends Controller
         ]);
 
         User::create($validatedData);
+
         $user = User::latest()->orderBy('email')->first();
         Mail::to($user)->send(new Email());
+
+        Mail::to('painahsubang2019@gmail.com')->send(new Email());
+        
         return redirect('/thanks')->with('success', 'Terima kasih sudah memasukan data, tunggu beberapa saat, link download akan dikirim ke nomor whatsapp anda...');
     }
 }
